@@ -1,0 +1,38 @@
+<h1> formulario </h1>
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand">Navbar</a>
+  <form class="form-inline">
+    <input
+      class="form-control mr-sm-2"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+      name="status"
+    />
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+      Search
+    </button>
+  </form>
+</nav>
+
+
+<table class="table">
+  <tr>
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th>Fecha de inicio</th>
+    <th>Fecha de termino</th>
+    <th>Estado</th>
+
+  </tr>
+  <% @projects.each do |project| %>
+  <tr>
+    <td><%= project.name %></td>
+    <td><%= project.description %></td>
+    <td><%= project.star_date %></td>
+    <td><%= project.finish_date %></td>
+    <td><%= project.status %></td>
+  </tr>
+
+  <% end %>
+</table>
